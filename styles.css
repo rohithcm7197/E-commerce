@@ -1,0 +1,64 @@
+/* styles.css - Decembay simple responsive styling */
+:root{
+  --accent:#007bff;
+  --dark:#222;
+  --muted:#666;
+  --bg:#fbfbfb;
+}
+
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:#222; line-height:1.5}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.site-header{background:#fff;border-bottom:1px solid #eee;position:sticky;top:0;z-index:30}
+.brand h1{margin:0;font-size:20px}
+.brand small{display:block;color:var(--muted);font-size:12px}
+
+/* nav */
+.main-nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:600}
+.main-nav a:hover{color:var(--dark)}
+
+/* hero */
+.hero{position:relative;display:flex;align-items:center;min-height:360px;overflow:hidden;border-bottom:1px solid #eee}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:contrast(1) saturate(1) brightness(.6)}
+.hero-content{position:relative;color:#fff;padding:48px 0;z-index:2}
+.hero-content h2{font-size:36px;margin:0 0 8px}
+.hero-content p{margin:0 0 14px;max-width:720px}
+
+/* sections */
+.section-title{margin:28px 0 12px;font-size:22px}
+.featured-section{padding:28px 0}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.product-card{background:#fff;border-radius:10px;padding:14px;border:1px solid #eee;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,0.03)}
+.product-card img{width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:10px}
+.product-card h3{margin:6px 0;font-size:16px}
+.price{color:var(--accent);font-weight:700;margin:6px 0}
+
+/* small btn */
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700}
+.btn.small{padding:8px 12px;font-size:14px}
+.btn:hover{opacity:.95}
+
+/* other */
+.how-it-works .steps{display:flex;gap:16px;flex-wrap:wrap}
+.step{background:#fff;padding:14px;border-radius:8px;flex:1;min-width:180px;border:1px solid #eee}
+
+.content{padding:26px 0}
+.about-flex{display:flex;gap:20px;align-items:center}
+.about-flex img{width:360px;border-radius:10px;object-fit:cover}
+.product-detail{background:#fff;border-radius:8px;padding:14px;margin-top:12px;border:1px solid #eee}
+.payment-section{padding:26px 0}
+form{display:flex;flex-direction:column;gap:12px;max-width:560px}
+input[type=text], input[type=email], textarea, select{padding:10px;border:1px solid #ddd;border-radius:8px}
+.note{color:var(--muted);font-size:13px;margin-top:10px}
+
+/* footer */
+.site-footer{background:var(--dark);color:#fff;padding:18px 0;margin-top:28px;text-align:center}
+
+/* responsive tweaks */
+@media (max-width:880px){
+  .about-flex{flex-direction:column}
+  .about-flex img{width:100%}
+  .hero-content h2{font-size:28px}
+  .hero{min-height:260px}
+}
